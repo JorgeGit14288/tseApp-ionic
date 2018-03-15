@@ -1,0 +1,12 @@
+{
+    "android": {
+      "release": {
+        "keystore": "tseKey.jks",
+        "storePassword": "tseAppMovilDev",
+        "alias": "tseDev",
+        "password" : "tseDevKey",
+        "keystoreType": ""
+      }
+    }
+  }
+  
