@@ -11,6 +11,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpProvider } from '../providers/http/http';
 import { TseProvider } from '../providers/tse/tse';
+import { IngresarSolicitudPageModule } from '../pages/ingresar-solicitud/ingresar-solicitud.module';
+import { ResultadoConsultaPageModule } from '../pages/resultado-consulta/resultado-consulta.module';
+import { MostrarCapchaPageModule } from '../pages/mostrar-capcha/mostrar-capcha.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { TseProvider } from '../providers/tse/tse';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    IngresarSolicitudPageModule,
+    ResultadoConsultaPageModule,
+    MostrarCapchaPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
