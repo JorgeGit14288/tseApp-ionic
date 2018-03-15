@@ -1,18 +1,42 @@
 <!--
-  Generated template for the IngresarSolicitudPage page.
+  Generated template for the LoginPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
+         <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>ingresar-solicitud</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+
+        <ion-title>Solicitud</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
 
+
+<ion-content padding scroll="false">
+    <div class="div-form">
+        <ion-title text-center>Ingrese sus datos</ion-title>
+
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+            <ion-list>
+                <ion-item>
+                    <ion-label color="primary">No CUI:</ion-label>
+                    <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label color="primary">Fecha de Nacimiento:</ion-label>
+                    <ion-datetime name="fechaNacimiento" displayFormat="DD/MM/YYYY" [(ngModel)]="solicitud.fechaNacimiento" required></ion-datetime>
+                </ion-item>
+            </ion-list>
+            <button ion-button color="primary" type="submit" block [disabled]="solicitud.cui==''|| solicitud.fechaNacimiento==''"> Consultar </button>
+
+        </form>
+    </div>
 </ion-content>
