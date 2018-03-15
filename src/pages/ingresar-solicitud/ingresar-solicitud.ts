@@ -20,7 +20,7 @@ import { MostrarCapchaPage } from '../mostrar-capcha/mostrar-capcha';
 })
 export class IngresarSolicitudPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, tseProv: TseProvider
+  constructor(public navCtrl: NavController, public navParams: NavParams, public tseProv: TseProvider
     ,private alertCtrl: AlertController, public loadingCtrl: LoadingController) {
   }
 

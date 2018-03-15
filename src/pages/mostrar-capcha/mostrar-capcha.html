@@ -6,13 +6,27 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>mostrar-capcha</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title text-center>Ingresar Capcha</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
-
 <ion-content padding>
+    <div class="div-form">
+        <ion-item>
+            <img [src]="base64Image">
+            <!--
+      <h2>{{ capcha.codigo }}</h2>
+      <p>{{ capcha.transaccion }}</p>
+      <p>{{ capcha.imagen }}</p>
+      -->
+        </ion-item>
 
+        <ion-item>
+            <ion-label color="primary">Ingrese el Capcha:</ion-label>
+            <ion-input type="text" [(ngModel)]="codigoCap" Required></ion-input>
+        </ion-item>
+        <button ion-button full (click)="onSubmit()" [disabled]="codigoCap==''">Validar</button>
+    </div>
 </ion-content>
