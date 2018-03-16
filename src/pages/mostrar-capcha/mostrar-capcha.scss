@@ -2,4 +2,25 @@ page-mostrar-capcha {
     .div-form {
         padding-top: 5%;
     }
+    /* Solve problem on a non-solid background */
+
+    .img { 
+    border: 2px solid black !important; 
+     width: 75%;
+
+    } 
+    
+   
+    
+
 }
+img.hover { 
+    outline: 3px solid black !important;
+    /*#5774a7
+      texto color:  color: #808794;  titulo #555c69
+    toolbar-md-primary .toolbar-background-md {
+    background: #5774a7;
+
+    */
+   
+} 

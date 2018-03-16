@@ -18,10 +18,35 @@
     background-color: #F5F5F5;
 }
 h3 {
-    color: #3276B1;
+    color:#555c69!important;
 }
 p {
-    color: #31708f;
+    color: #808794 !important;
     text-align: justify;
+    font-size: 15px!important;
 }
+.toolbar-background {
+    background-color: #5774a7 !important;
+}
+ion-label
+    {
+        color: #808794 !important;
+        font-family: inherit !important;
+        font-size: 15px !important;
+    }
+    .button {
+        background-color: #5774a7;
+    }
+    .alert-message{
+        color: #afb2b9!important;
+    }
+    .alert .alert-button{
+        color:#5774a7;
+    }
+    body{
+        font-family: inherit !important;
+    }
+
+
+
 
