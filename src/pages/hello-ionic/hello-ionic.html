@@ -1,25 +1,26 @@
 <ion-header>
   <ion-navbar color="primary">
+    <!--
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title text-center > Bienvenido</ion-title>
+  -->
+    <ion-title text-center>Tribunal Supremo Electoral</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <h3  text-center>Consulte su lugar de votación</h3>
 
   <p>
-    This starter project is our way of helping you get a functional app running in record time.
+      El presente servicio brinda al ciudadano información para verificación de sus datos que se encuentran registrados en la Base de Datos del Padrón Electoral.
   </p>
+ <br>
+ 
   <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
+    <button text-center ion-button color="primary" (click)="consultar()" >Realizar Consulta</button>
   </p>
 
 </ion-content>

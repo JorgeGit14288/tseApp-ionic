@@ -63,11 +63,7 @@ export class MostrarCapchaPage {
     Id: ""
   }
 
-
-
   onSubmit():void{
-
-
     this.validarCapcha.nTransac = this.capcha.transaccion;
     this.validarCapcha.Id="ef1b058bc386";
     this.validarCapcha.Guid = this.codigoCap;
@@ -83,7 +79,7 @@ export class MostrarCapchaPage {
         let alert = this.alertCtrl.create({
           title: 'Error',
           //subTitle: '10% of battery r',
-          message: this.respuestaCapcha.mensaje,
+          message: this.respuestaCapcha.USRMENSAJE,
            buttons: [
             {
               text: 'Aceptar',
