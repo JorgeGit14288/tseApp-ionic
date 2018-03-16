@@ -6,4 +6,11 @@ page-hello-ionic {
         color: #31708f;
         text-align: justify;
     }
+    ion-img {
+        display: inline-block;
+        min-width: 20px;
+        min-height: 20px;
+        background: #eee;
+        contain: layout;
+    }
 }

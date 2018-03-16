@@ -1,26 +1,28 @@
 <ion-header>
-  <ion-navbar color="primary">
-    <!--
+    <ion-navbar color="primary">
+        <!--
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
   -->
-    <ion-title text-center>Tribunal Supremo Electoral</ion-title>
-  </ion-navbar>
+        <ion-title text-center>Tribunal Supremo Electoral</ion-title>
+    </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+    <div style="text-align:center;">
+        <ion-img src="assets/imgs/baner1.png"></ion-img>
+    </div>
+    <h3 text-center>Consulte su lugar de votación</h3>
 
-  <h3  text-center>Consulte su lugar de votación</h3>
+    <p>
+        El presente servicio brinda al ciudadano información para verificación de sus datos que se encuentran registrados en la Base de Datos del Padrón Electoral.
+    </p>
+    <br>
 
-  <p>
-      El presente servicio brinda al ciudadano información para verificación de sus datos que se encuentran registrados en la Base de Datos del Padrón Electoral.
-  </p>
- <br>
- 
-  <p>
-    <button text-center ion-button color="primary" (click)="consultar()" >Realizar Consulta</button>
-  </p>
+    <p>
+        <button text-center ion-button color="primary" (click)="consultar()">Realizar Consulta</button>
+    </p>
 
 </ion-content>

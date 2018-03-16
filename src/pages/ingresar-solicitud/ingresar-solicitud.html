@@ -10,29 +10,33 @@
 <ion-header>
 
     <ion-navbar color="primary">
-            <ion-title text-center>Tribunal Supremo Electoral</ion-title>
+        <ion-title text-center>Tribunal Supremo Electoral</ion-title>
     </ion-navbar>
 
 </ion-header>
 
-
-
-
 <ion-content padding scroll="false">
+    <div style="text-align:center;">
+        <ion-img src="assets/imgs/baner1.png"></ion-img>
+    </div>
     <div class="div-form">
         <h3 text-center>Ingrese sus datos</h3>
         <p>
             <form #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
                 <ion-list>
                     <ion-row>
+                        <ion-row>
+                            <ion-label color="primary">Ingrese su número de DPI:</ion-label>
+                        </ion-row>
                         <ion-item>
-                            <ion-label color="primary">No CUI:</ion-label>
                             <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" required></ion-input>
                         </ion-item>
                     </ion-row>
                     <ion-row>
+                        <ion-row>
+                            <ion-label color="primary">Ingrese su fecha de nacimiento:</ion-label>
+                        </ion-row>
                         <ion-item>
-                            <ion-label color="primary">Fecha de Nacimiento:</ion-label>
                             <ion-datetime name="fechaNacimiento" displayFormat="DD/MM/YYYY" [(ngModel)]="solicitud.fechaNacimiento" required></ion-datetime>
                         </ion-item>
                     </ion-row>
