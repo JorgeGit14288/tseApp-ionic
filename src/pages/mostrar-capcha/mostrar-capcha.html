@@ -29,6 +29,13 @@
                 <ion-input type="text" [(ngModel)]="codigoCap" Required></ion-input>
             </ion-item>
             <p>
-                <button ion-button full (click)="onSubmit()" [disabled]="codigoCap==''">Validar</button>
+
+
+                <ion-row>
+                    <ion-col style="text-align:center">
+                        <button ion-button full (click)="onSubmit()" [disabled]="codigoCap==''">Validar</button>
+                    </ion-col>
+                </ion-row>
+
     </div>
 </ion-content>

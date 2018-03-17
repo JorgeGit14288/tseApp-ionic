@@ -16,6 +16,7 @@ import { IngresarSolicitudPageModule } from '../pages/ingresar-solicitud/ingresa
 import { ResultadoConsultaPageModule } from '../pages/resultado-consulta/resultado-consulta.module';
 import { MostrarCapchaPageModule } from '../pages/mostrar-capcha/mostrar-capcha.module';
 import { FabMenuComponent } from '../components/fab-menu/fab-menu';
+import { SlidesInfoPageModule } from '../pages/slides-info/slides-info.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { FabMenuComponent } from '../components/fab-menu/fab-menu';
     IngresarSolicitudPageModule,
     ResultadoConsultaPageModule,
     MostrarCapchaPageModule,
+    SlidesInfoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

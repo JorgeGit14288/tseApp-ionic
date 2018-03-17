@@ -7,7 +7,7 @@
 <ion-header>
 
     <ion-navbar color="primary">
-            <ion-title text-center>Tribunal Supremo Electoral</ion-title>
+        <ion-title text-center>Tribunal Supremo Electoral</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -61,5 +61,11 @@
             <ion-col>{{datosVotacion.BOLETA}}</ion-col>
         </ion-row>
     </ion-grid>
+
+    <ion-row>
+        <ion-col style="text-align:center">
+            <button text-center ion-button (click)="irConsultar()">Realizar Nueva Consulta</button>
+        </ion-col>
+    </ion-row>
 
 </ion-content>

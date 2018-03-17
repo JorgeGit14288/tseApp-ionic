@@ -77,7 +77,7 @@ export class MostrarCapchaPage {
       this.loader.dismiss();
       if (this.respuestaCapcha.STATUS =="0"){
         let alert = this.alertCtrl.create({
-          title: 'Error',
+         // title: 'Error',
           //subTitle: '10% of battery r',
           message: this.respuestaCapcha.USRMENSAJE,
            buttons: [
@@ -85,7 +85,7 @@ export class MostrarCapchaPage {
               text: 'Aceptar',
               handler: () => {
 
-                this.navCtrl.push(IngresarSolicitudPage)
+                this.navCtrl.setRoot(IngresarSolicitudPage);
 
               }
             }

@@ -41,7 +41,13 @@
                         </ion-item>
                     </ion-row>
                 </ion-list>
-                <button ion-button color="primary" type="submit" block [disabled]="solicitud.cui==''|| solicitud.fechaNacimiento==''"> Consultar </button>
+                <ion-row>
+                    <ion-col style="text-align:center">
+                        <button ion-button color="primary" type="submit" block [disabled]="solicitud.cui==''|| solicitud.fechaNacimiento==''"> Consultar </button>
+                    </ion-col>
+                </ion-row>
+
+
 
             </form>
     </div>

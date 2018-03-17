@@ -2,10 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { TseProvider } from '../../providers/tse/tse';
 import { MostrarCapchaPage } from '../mostrar-capcha/mostrar-capcha';
-import { FabMenuComponent } from '../../components/fab-menu/fab-menu';
-
-
-
 
 /**
  * Generated class for the IngresarSolicitudPage page.
@@ -31,8 +27,8 @@ export class IngresarSolicitudPage {
   public solicitud : any ={
     token:"9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
     codSys : "",
-    cui: "1957043550101",
-    fechaNacimiento: "1962-07-07",
+    cui: "1640859040904",
+    fechaNacimiento: "1940-12-10",
    }
 
    public respuestaCapcha: any={
