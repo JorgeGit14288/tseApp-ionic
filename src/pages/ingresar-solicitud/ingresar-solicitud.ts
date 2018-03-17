@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { TseProvider } from '../../providers/tse/tse';
 import { MostrarCapchaPage } from '../mostrar-capcha/mostrar-capcha';
+import { FabMenuComponent } from '../../components/fab-menu/fab-menu';
 
 
 

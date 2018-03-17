@@ -15,13 +15,15 @@ import { TseProvider } from '../providers/tse/tse';
 import { IngresarSolicitudPageModule } from '../pages/ingresar-solicitud/ingresar-solicitud.module';
 import { ResultadoConsultaPageModule } from '../pages/resultado-consulta/resultado-consulta.module';
 import { MostrarCapchaPageModule } from '../pages/mostrar-capcha/mostrar-capcha.module';
+import { FabMenuComponent } from '../components/fab-menu/fab-menu';
 
 @NgModule({
   declarations: [
     MyApp,
     HelloIonicPage,
     ItemDetailsPage,
-    ListPage
+    ListPage,
+    FabMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { MostrarCapchaPageModule } from '../pages/mostrar-capcha/mostrar-capcha.
     HttpClientModule,
     IngresarSolicitudPageModule,
     ResultadoConsultaPageModule,
-    MostrarCapchaPageModule
+    MostrarCapchaPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [

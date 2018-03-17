@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -17,36 +15,47 @@
 .scroll-content {
     background-color: #F5F5F5;
 }
+
 h3 {
-    color:#555c69!important;
+    color: #555c69!important;
 }
+
 p {
     color: #808794 !important;
     text-align: justify;
     font-size: 15px!important;
 }
+
 .toolbar-background {
     background-color: #5774a7 !important;
 }
-ion-label
-    {
-        color: #808794 !important;
-        font-family: inherit !important;
-        font-size: 15px !important;
-    }
-    .button {
-        background-color: #5774a7;
-    }
-    .alert-message{
-        color: #afb2b9!important;
-    }
-    .alert .alert-button{
-        color:#5774a7;
-    }
-    body{
-        font-family: inherit !important;
-    }
 
+ion-label {
+    color: #808794 !important;
+    font-family: inherit !important;
+    font-size: 15px !important;
+}
 
+.button {
+    background-color: #5774a7;
+}
 
+.alert-message {
+    color: #afb2b9!important;
+}
 
+.alert .alert-button {
+    color: #5774a7;
+}
+
+.fab ion-icon {
+    color: #ffff;
+}
+
+.fab {
+    background-color: #5774a7 !important;
+}
+
+body {
+    font-family: inherit !important;
+}
