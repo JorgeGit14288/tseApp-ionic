@@ -1,3 +1,15 @@
 page-resultado-consulta {
-
+    .grid .col {
+        border: solid 1px #5774a7 !important;
+    }
+    .col-table {
+        border: solid 1px #5774a7 !important;
+    }
+    .col-text-st {
+        font-weight: bold;
+        text-align: start;
+    }
+    .col-text {
+        text-align: center;
+    }
 }
