@@ -65,7 +65,7 @@ export class IngresarSolicitudPage {
         //enviamos los datos a otra pagina
          if (this.respuestaCapcha.STATUS =="0"){
            let alert = this.alertCtrl.create({
-             title: 'Error',
+            // title: 'Error',
              //subTitle: '10% of battery r',
              message: this.respuestaCapcha.USRMENSAJE,
              buttons: [
@@ -89,7 +89,7 @@ export class IngresarSolicitudPage {
       }).catch(err=>{
         this.loader.dismiss();
         let alert = this.alertCtrl.create({
-          title: 'Error',
+         // title: 'Error',
           //subTitle: '10% of battery r',
           message: err.message,
           buttons: ['Aceptar']

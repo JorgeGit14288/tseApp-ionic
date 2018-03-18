@@ -17,11 +17,7 @@
         </ion-buttons>
 
         <ion-title text-center>Tribunal Supremo Electoral</ion-title>
-        <ion-buttons end>
-            <button ion-button icon-only (click)="irHome()">
-            <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
-          </button>
-        </ion-buttons>
+
     </ion-navbar>
 
 </ion-header>
@@ -40,8 +36,15 @@
                             <ion-label color="primary">Ingrese su número de DPI:</ion-label>
                         </ion-row>
                         <ion-item>
-                            <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" required min="14" max="16"></ion-input>
+                            <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" #cui="ngModel" [required]="true" min="15" max="20" pattern="[0-9]+" ></ion-input>
                         </ion-item>
+                        <!-- 
+                        <span *ngIf="cui.errors">
+                          <span [hidden]="!cui.errors.required">
+                              <ion-label class="label-error" > Campo Requerido </ion-label>
+                          </span>
+                      </span>
+                      -->
                     </ion-row>
                     <ion-row>
                         <ion-row>
@@ -57,8 +60,6 @@
                         <button ion-button color="primary" type="submit" block [disabled]="solicitud.cui==''|| solicitud.fechaNacimiento==''"> Consultar </button>
                     </ion-col>
                 </ion-row>
-
-
 
             </form>
     </div>

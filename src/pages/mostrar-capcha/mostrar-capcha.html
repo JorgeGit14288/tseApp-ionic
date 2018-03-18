@@ -23,14 +23,13 @@
 
         <p>
             <ion-row>
-                <ion-label>Ingrese el Capcha:</ion-label>
+                <ion-label>Ingrese el código que muestra la imagen:</ion-label>
             </ion-row>
             <ion-item>
-                <ion-input type="text" [(ngModel)]="codigoCap" Required></ion-input>
+                <ion-input type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
             </ion-item>
+
             <p>
-
-
                 <ion-row>
                     <ion-col style="text-align:center">
                         <button ion-button full (click)="onSubmit()" [disabled]="codigoCap==''">Validar</button>
