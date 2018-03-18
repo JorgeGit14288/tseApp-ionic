@@ -1,19 +1,18 @@
 <ion-header>
     <ion-navbar color="primary">
         <!--
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-  -->
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+-->
         <ion-title text-center>Tribunal Supremo Electoral</ion-title>
         <ion-buttons end>
             <button ion-button icon-only (click)="salir()">
-            <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
-          </button>
+          <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+        </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
-
 
 <ion-content padding>
     <div style="text-align:center;">
@@ -26,39 +25,36 @@
     </p>
     <br>
     <!--
-    <ion-row>
-        <ion-col style="text-align:center">
-            <button text-center ion-button (click)="consultar()">Realizar Consulta</button>
-        </ion-col>
-    </ion-row>
+  <ion-row>
+      <ion-col style="text-align:center">
+          <button text-center ion-button (click)="consultar()">Realizar Consulta</button>
+      </ion-col>
+  </ion-row>
 
-    <ion-row>
-        <ion-col style="text-align:center">
-            <button text-center ion-button (click)="verInfo()">¿Que es Consulta Popular?</button>
-        </ion-col>
-    </ion-row>
-    -->
+  <ion-row>
+      <ion-col style="text-align:center">
+          <button text-center ion-button (click)="verInfo()">¿Que es Consulta Popular?</button>
+      </ion-col>
+  </ion-row>
+  -->
     <ion-grid>
 
         <ion-row>
             <ion-col>
                 <button ion-item (click)="verInfo()">
-          <img src="assets/imgs/buttons/btn_1.JPG">
-          <h2 text-wrap>¿Que es la Consulta Popular?</h2>
-        </button>
+        <img src="assets/imgs/buttons/btn_1.JPG">
+        <h2 text-wrap>¿Que es la Consulta Popular?</h2>
+      </button>
             </ion-col>
             <ion-col>
                 <button ion-item (click)="consultar()">
-               <img src="assets/imgs/buttons/btn_2.JPG">
-          <h2 text-wrap>Consultar Centro de Votacion</h2>
-        </button>
+             <img src="assets/imgs/buttons/btn_2.JPG">
+        <h2 text-wrap>Consultar Centro de Votacion</h2>
+      </button>
             </ion-col>
         </ion-row>
 
     </ion-grid>
-
-
-
 
 </ion-content>
 <ion-footer>
@@ -67,6 +63,5 @@
             <img src="assets/imgs/banner-footer.png">
         </ion-col>
     </ion-row>
-
 
 </ion-footer>

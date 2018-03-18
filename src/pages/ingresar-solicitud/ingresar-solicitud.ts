@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
 import { TseProvider } from '../../providers/tse/tse';
 import { MostrarCapchaPage } from '../mostrar-capcha/mostrar-capcha';
-import { HelloIonicPage } from '../hello-ionic/hello-ionic';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the IngresarSolicitudPage page.
@@ -39,7 +39,6 @@ export class IngresarSolicitudPage {
     IMA:""
   }
   public loader =null;
-
 
   logForm(form) {
     if(form.valid){
@@ -110,7 +109,7 @@ export class IngresarSolicitudPage {
     }
   }
   irHome(){
-    this.navCtrl.setRoot(HelloIonicPage);
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

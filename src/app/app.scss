@@ -34,8 +34,8 @@ p {
 }
 
 .toolbar-background {
-    //background-color: #5774a7 !important;
-    background-color: #0076CC !important;
+    background-color: #5774a7 !important;
+    //background-color: #0076CC !important;
 }
 
 ion-label {
@@ -45,7 +45,8 @@ ion-label {
 }
 
 .button {
-    background-color: #0076CC;
+    // background-color: #0076CC;
+    background-color: #5774a7;
 }
 
 .alert-message {
@@ -63,8 +64,10 @@ ion-label {
 .fab {
     background-color: #5774a7 !important;
 }
-.label-error{
-    color: #0076cc !important; margin-left: 16px;
+
+.label-error {
+    color: #0076cc !important;
+    margin-left: 16px;
 }
 
 body {
