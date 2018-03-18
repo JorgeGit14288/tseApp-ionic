@@ -10,7 +10,18 @@
 <ion-header>
 
     <ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button icon-only (click)="irHome()">
+            <ion-icon ios="ios-home" md="md-home"></ion-icon>
+          </button>
+        </ion-buttons>
+
         <ion-title text-center>Tribunal Supremo Electoral</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="irHome()">
+            <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+          </button>
+        </ion-buttons>
     </ion-navbar>
 
 </ion-header>

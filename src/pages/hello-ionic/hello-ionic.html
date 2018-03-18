@@ -25,7 +25,7 @@
         El presente servicio brinda al ciudadano información para verificación de sus datos que se encuentran registrados en la Base de Datos del Padrón Electoral.
     </p>
     <br>
-
+    <!--
     <ion-row>
         <ion-col style="text-align:center">
             <button text-center ion-button (click)="consultar()">Realizar Consulta</button>
@@ -37,6 +37,36 @@
             <button text-center ion-button (click)="verInfo()">¿Que es Consulta Popular?</button>
         </ion-col>
     </ion-row>
+    -->
+    <ion-grid>
+
+        <ion-row>
+            <ion-col>
+                <button ion-item (click)="verInfo()">
+          <img src="assets/imgs/buttons/btn_3.JPG">
+          <h2 text-wrap>¿Que es la Consulta Popular?</h2>
+        </button>
+            </ion-col>
+            <ion-col>
+                <button ion-item (click)="consultar()">
+               <img src="assets/imgs/buttons/btn_4.JPG">
+          <h2 text-wrap>Consultar Centro de Votacion</h2>
+        </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
 
 
 </ion-content>
+<ion-footer>
+    <ion-row>
+        <ion-col>
+            <img src="assets/imgs/banner-footer.png">
+        </ion-col>
+    </ion-row>
+
+
+</ion-footer>
