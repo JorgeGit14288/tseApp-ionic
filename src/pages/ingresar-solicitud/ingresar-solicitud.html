@@ -36,9 +36,9 @@
                             <ion-label color="primary">Ingrese su número de DPI:</ion-label>
                         </ion-row>
                         <ion-item>
-                            <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" #cui="ngModel" [required]="true" min="15" max="20" pattern="[0-9]+" ></ion-input>
+                            <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" #cui="ngModel" [required]="true" min="15" max="20" pattern="[0-9]+"></ion-input>
                         </ion-item>
-                        <!-- 
+                        <!--
                         <span *ngIf="cui.errors">
                           <span [hidden]="!cui.errors.required">
                               <ion-label class="label-error" > Campo Requerido </ion-label>
@@ -64,3 +64,12 @@
             </form>
     </div>
 </ion-content>
+
+<ion-footer>
+    <ion-row>
+        <ion-col>
+            <img src="assets/imgs/banner-footer.png">
+        </ion-col>
+    </ion-row>
+
+</ion-footer>

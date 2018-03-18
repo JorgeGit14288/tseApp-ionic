@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController, Platform } from 'ionic-angular';
 import { TseProvider } from '../../providers/tse/tse';
 import { MostrarCapchaPage } from '../mostrar-capcha/mostrar-capcha';
 import { HomePage } from '../home/home';
@@ -19,17 +19,23 @@ import { HomePage } from '../home/home';
 export class IngresarSolicitudPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tseProv: TseProvider
-    ,private alertCtrl: AlertController, public loadingCtrl: LoadingController) {
-  }
-
+    ,private alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform: Platform) {
+      let backAction =  platform.registerBackButtonAction(() => {
+        console.log("se ha presionado el boon atras");
+        this.navCtrl.setRoot(HomePage);
+        backAction();
+      },2)
+    }
   ionViewDidLoad() {
     console.log('ionViewDidLoad IngresarSolicitudPage');
   }
   public solicitud : any ={
     token:"9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
     codSys : "",
-    cui: "1640859040904",
-    fechaNacimiento: "1940-12-10",
+    //cui: "1640859040904",
+   // fechaNacimiento: "1940-12-10",
+   cui: "",
+    fechaNacimiento: "",
    }
 
    public respuestaCapcha: any={

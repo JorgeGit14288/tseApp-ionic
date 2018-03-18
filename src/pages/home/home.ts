@@ -20,7 +20,11 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform:Platform) {
-
+      let backAction =  platform.registerBackButtonAction(() => {
+        console.log("se ha presionado el boon atras");
+        this.salir();
+        backAction();
+      },2)
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
@@ -38,7 +42,20 @@ export class HomePage {
   }
 salir(){
     console.log("Salir");
-  this.platform.exitApp()
+    let alert = this.alertCtrl.create({
+      // title: 'Error',
+       //subTitle: '10% of battery r',
+       message: "Gracias por utilizar nuestro servicio",
+       buttons: [
+        {
+          text: 'Aceptar',
+          handler: () => {
+            this.platform.exitApp()
+          }
+        }
+      ]
+     });
+     alert.present();
   }
 }
 
