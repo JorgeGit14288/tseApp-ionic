@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SlidesInfoPage page.
@@ -16,8 +17,14 @@ import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud'
 })
 export class SlidesInfoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
+    let backAction =  platform.registerBackButtonAction(() => {
+      console.log("se ha presionado el boon atras");
+      this.navCtrl.setRoot(HomePage);
+      backAction();
+    },2)
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlidesInfoPage');
