@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { PageConfigurations } from './../page_configurations';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform, MenuController, AlertController, LoadingController } from 'ionic-angular';
@@ -65,5 +66,8 @@ export class ResultadoConsultaPage extends PageConfigurations {
   backButtonAction(){
     this.navCtrl.setRoot(IngresarSolicitudPage);
      }
+     irHome(){
+      this.navCtrl.setRoot(HomePage);
+    }
 }
 
