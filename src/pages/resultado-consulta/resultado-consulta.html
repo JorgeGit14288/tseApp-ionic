@@ -5,16 +5,14 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-    <ion-navbar color="primary">
+    <ion-navbar color="primary" hideBackButton >
         <ion-title text-center>Tribunal Supremo Electoral</ion-title>
     </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
-    <ion-title text-center>Datos de Votacion</ion-title>
+<ion-content padding scroll="false">
+    <ion-title text-center>Información de votación</ion-title>
     <ion-grid>
 
         <ion-row>
@@ -31,7 +29,7 @@
         </ion-row>
         <br>
         <ion-row>
-            <ion-col class="col-text-st">Lugar Votacion:</ion-col>
+            <ion-col class="col-text-st">Lugar Votación:</ion-col>
             <ion-col class="col-text">{{datosVotacion.CENTRO}}</ion-col>
         </ion-row>
         <ion-row>
@@ -43,7 +41,7 @@
             <ion-col class="col-text">{{datosVotacion.MUNICIPIO}}</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col class="col-text-st">Direccion:</ion-col>
+            <ion-col class="col-text-st">Dirección:</ion-col>
             <ion-col class="col-text">{{datosVotacion.DIRECCION}}</ion-col>
         </ion-row>
 
@@ -54,11 +52,11 @@
             <ion-col class="col-text">{{datosVotacion.MESA_DE_NUMERO}}</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col class="col-text-st">Pagina:</ion-col>
+            <ion-col class="col-text-st">Página:</ion-col>
             <ion-col class="col-text">{{datosVotacion.PAGINA}}</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col class="col-text-st">Linea:</ion-col>
+            <ion-col class="col-text-st">Línea:</ion-col>
             <ion-col class="col-text">{{datosVotacion.LINEA}}</ion-col>
         </ion-row>
         <ion-row>
@@ -67,10 +65,12 @@
         </ion-row>
     </ion-grid>
 
-
     <ion-row>
-        <ion-col style="text-align:center">
-            <button text-center ion-button (click)="irConsultar()">Realizar Nueva Consulta</button>
+        <ion-col text-right >
+            <button text-center ion-button (click)="irConsultar()">Volver al inicio</button>
+        </ion-col>
+        <ion-col text-left>
+            <button text-center ion-button (click)="irConsultar()">Nueva Consulta</button>
         </ion-col>
     </ion-row>
     <ion-row class="footer-image">

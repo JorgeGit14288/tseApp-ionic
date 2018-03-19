@@ -62,6 +62,8 @@ export class ResultadoConsultaPage extends PageConfigurations {
   irConsultar(){
     this.navCtrl.setRoot(IngresarSolicitudPage);
   }
-
+  backButtonAction(){
+    this.navCtrl.setRoot(IngresarSolicitudPage);
+     }
 }
 

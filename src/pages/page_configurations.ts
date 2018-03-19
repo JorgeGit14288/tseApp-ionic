@@ -23,9 +23,8 @@ export class PageConfigurations implements OnInit {
         public alertCtrl: AlertController,
         public platform: Platform, public ionicApp?: IonicApp,
         public myApp?: MyApp
-      ) {
-
-
+    ) {
+        this.initializeApp();
     }
 
     ngOnInit(): void {
@@ -33,38 +32,25 @@ export class PageConfigurations implements OnInit {
     }
     initializeApp() {
         this.platform.ready().then(() => {
-            // Okay, so the platform is ready and our plugins are available.
-            // Here you can do any higher level native things you might need.
-            // this.myApp.statusBar.styleDefault();
-            this.myApp.splashScreen.hide();
 
             this.platform.registerBackButtonAction(() => {
 
-                let isLoading = this.ionicApp._loadingPortal.getActive();
-                let isOverlay = this.ionicApp._overlayPortal.getActive() || this.ionicApp._modalPortal.getActive();
-
-                if (isLoading) {
-                    isLoading.dismiss();
-                } else if (isOverlay) {
-                    isOverlay.dismiss();
+                // get current active page
+                let view = this.navCtrl.getActive();
+                let activeView: ViewController = this.navCtrl.getActive();
+                //console.log("view: "+view.component.name + " usuario: "+usuario);
+                if (this.menuCtrl.isOpen()) {
+                    this.menuCtrl.close();
+                }
+                else if (view.component.name == "HomePage") {
+                    this.salir()
+                }
+                else if (this.navCtrl.canGoBack()) {
+                    this.navCtrl.pop();
+                } else if (typeof activeView.instance.backButtonAction === 'function') {
+                    activeView.instance.backButtonAction();
                 } else {
-                    // get current active page
-                    let view = this.navCtrl.getActive();
-                    let activeView: ViewController = this.navCtrl.getActive();
-                    //console.log("view: "+view.component.name + " usuario: "+usuario);
-                    if (this.menuCtrl.isOpen()) {
-                        this.menuCtrl.close();
-                    }
-                    else if (view.component.name == "HomePage") {
-                      this.salir()
-                    }
-                    else if (this.navCtrl.canGoBack()) {
-                        this.navCtrl.pop();
-                    } else if (typeof activeView.instance.backButtonAction === 'function') {
-                        activeView.instance.backButtonAction();
-                    }  else {
-                        this.navCtrl.setRoot(HomePage);
-                    } 
+                    this.navCtrl.setRoot(HomePage);
                 }
 
             })
