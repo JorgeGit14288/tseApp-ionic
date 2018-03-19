@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController, Platform, MenuController } from 'ionic-angular';
 import { TseProvider } from '../../providers/tse/tse';
 import { MostrarCapchaPage } from '../mostrar-capcha/mostrar-capcha';
 import { HomePage } from '../home/home';
+import { PageConfigurations } from '../page_configurations';
+
 
 /**
  * Generated class for the IngresarSolicitudPage page.
@@ -16,15 +18,12 @@ import { HomePage } from '../home/home';
   selector: 'page-ingresar-solicitud',
   templateUrl: 'ingresar-solicitud.html',
 })
-export class IngresarSolicitudPage {
+export class IngresarSolicitudPage extends PageConfigurations {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tseProv: TseProvider
-    ,private alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform: Platform) {
-      let backAction =  platform.registerBackButtonAction(() => {
-        console.log("se ha presionado el boon atras");
-        this.navCtrl.setRoot(HomePage);
-        backAction();
-      },2)
+    ,public alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform: Platform, public menuController :MenuController) {
+     
+      super(navCtrl,menuController , loadingCtrl, alertCtrl, platform);
     }
   ionViewDidLoad() {
     console.log('ionViewDidLoad IngresarSolicitudPage');
@@ -117,5 +116,7 @@ export class IngresarSolicitudPage {
   irHome(){
     this.navCtrl.setRoot(HomePage);
   }
-
+  backButtonAction(){
+   this.navCtrl.setRoot(HomePage);
+    }
 }

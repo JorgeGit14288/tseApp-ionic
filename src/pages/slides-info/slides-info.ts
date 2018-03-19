@@ -18,14 +18,8 @@ import { HomePage } from '../home/home';
 export class SlidesInfoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public platform: Platform) {
-    let backAction =  platform.registerBackButtonAction(() => {
-      console.log("se ha presionado el boon atras");
-      this.navCtrl.setRoot(HomePage);
-      backAction();
-    },2)
+    
   }
-
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad SlidesInfoPage');
   }
@@ -33,5 +27,7 @@ export class SlidesInfoPage {
     console.log("Ultima diapositiva");
     this.navCtrl.setRoot(IngresarSolicitudPage);
   }
-
+  backButtonAction(){
+    this.navCtrl.setRoot(HomePage);
+     }
 }

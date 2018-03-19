@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController, MenuController, Platform } from 'ionic-angular';
 import { TseProvider } from '../../providers/tse/tse';
 import { ResultadoConsultaPage } from '../resultado-consulta/resultado-consulta';
 import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud';
+import { PageConfigurations } from '../page_configurations';
+
 
 
 /**
@@ -19,13 +21,15 @@ import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud'
   selector: 'page-mostrar-capcha',
   templateUrl: 'mostrar-capcha.html',
 })
-export class MostrarCapchaPage {
+export class MostrarCapchaPage extends PageConfigurations {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private tseProv: TseProvider, private alertCtrl: AlertController,  public loadingCtrl: LoadingController) {
+  constructor( public platform:Platform, public menuController:MenuController, public navCtrl: NavController, public navParams: NavParams, private tseProv: TseProvider, public alertCtrl: AlertController,  public loadingCtrl: LoadingController) {
+    super(navCtrl, menuController , loadingCtrl, alertCtrl, platform);
+
     this.capcha.imagen =navParams.data.capcha.IMA;
     this.capcha.transaccion  =navParams.data.capcha.NTRANS;
     this.base64Image = "data:image/jpeg;base64," + navParams.data.capcha.IMA;
-
+    
   }
   public loader =null;
   public codigoCap ="";

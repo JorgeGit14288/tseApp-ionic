@@ -1,3 +1,4 @@
+import { HomePage } from './home/home';
 
 import {
     ViewController,
@@ -15,12 +16,13 @@ import { DecimalPipe } from "@angular/common";
 
 
 export class PageConfigurations implements OnInit {
-    constructor(public navCtrl: NavController,
+    constructor(
+        public navCtrl: NavController,
         public menuCtrl: MenuController,
         public loadCtrl: LoadingController,
         public alertCtrl: AlertController,
-        public platform: Platform, public ionicApp: IonicApp,
-        public myApp: MyApp, public decimalpipe?: DecimalPipe,
+        public platform: Platform, public ionicApp?: IonicApp,
+        public myApp?: MyApp
       ) {
 
 
@@ -30,7 +32,7 @@ export class PageConfigurations implements OnInit {
 
     }
     initializeApp() {
-        this.myApp.platform.ready().then(() => {
+        this.platform.ready().then(() => {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
             // this.myApp.statusBar.styleDefault();
@@ -53,19 +55,16 @@ export class PageConfigurations implements OnInit {
                     if (this.menuCtrl.isOpen()) {
                         this.menuCtrl.close();
                     }
-                    // console.log("SI hay login " + view.component.name +"<>");
-                    else if (view.component.name == "HomePage") {//si esta en home preguntar si queire salir??
-                        //this.myApp.logout();
+                    else if (view.component.name == "HomePage") {
+                      this.salir()
                     }
                     else if (this.navCtrl.canGoBack()) {
                         this.navCtrl.pop();
                     } else if (typeof activeView.instance.backButtonAction === 'function') {
                         activeView.instance.backButtonAction();
-                    } else if (view.component.name == "HomePage") { //si esta en login exit.app
-                        //this.myApp.logout();
-                    } else {
-                        this.myApp.nav.setRoot("HomePage");
-                    } // goes to the first tab
+                    }  else {
+                        this.navCtrl.setRoot(HomePage);
+                    } 
                 }
 
             })

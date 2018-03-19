@@ -1,6 +1,8 @@
+import { PageConfigurations } from './../page_configurations';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, MenuController, AlertController, LoadingController } from 'ionic-angular';
 import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud';
+
 
 /**
  * Generated class for the ResultadoConsultaPage page.
@@ -14,10 +16,10 @@ import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud'
   selector: 'page-resultado-consulta',
   templateUrl: 'resultado-consulta.html',
 })
-export class ResultadoConsultaPage {
+export class ResultadoConsultaPage extends PageConfigurations {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-
+  constructor( public platform:Platform, public menuController:MenuController, public navCtrl: NavController, public navParams: NavParams,  public alertCtrl: AlertController,  public loadingCtrl: LoadingController) {
+    super(navCtrl, menuController , loadingCtrl, alertCtrl, platform);
     this.datosVotacion = navParams.data.res;
   }
 

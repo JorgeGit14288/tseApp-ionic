@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, LoadingController, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, LoadingController, Platform, MenuController } from 'ionic-angular';
 import { IngresarSolicitudPage } from '../ingresar-solicitud/ingresar-solicitud';
 import { SlidesInfoPage } from '../slides-info/slides-info';
+import { PageConfigurations } from '../page_configurations';
+
 
 /**
  * Generated class for the HomePage page.
@@ -16,15 +18,11 @@ import { SlidesInfoPage } from '../slides-info/slides-info';
   selector: 'page-home',
   templateUrl: 'home.html',
 })
-export class HomePage  {
+export class HomePage extends PageConfigurations  {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    private alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform:Platform) {
-      let backAction =  platform.registerBackButtonAction(() => {
-        console.log("se ha presionado el boon atras");
-        this.salir();
-        backAction();
-      },2)
+    public alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform:Platform, public menuController:MenuController) {
+      super(navCtrl,menuController , loadingCtrl, alertCtrl, platform);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
@@ -40,22 +38,6 @@ export class HomePage  {
     console.log("Ir a slides-menu");
     this.navCtrl.push(SlidesInfoPage);
   }
-salir(){
-    console.log("Salir");
-    let alert = this.alertCtrl.create({
-      // title: 'Error',
-       //subTitle: '10% of battery r',
-       message: "Gracias por utilizar nuestro servicio",
-       buttons: [
-        {
-          text: 'Aceptar',
-          handler: () => {
-            this.platform.exitApp()
-          }
-        }
-      ]
-     });
-     alert.present();
-  }
+
 }
 
