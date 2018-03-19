@@ -16,6 +16,7 @@
 <ion-content padding>
     <ion-title text-center>Datos de Votacion</ion-title>
     <ion-grid>
+
         <ion-row>
             <ion-col class="col-text-st">Nombre:</ion-col>
             <ion-col class="col-text">{{datosVotacion.NOMBRES_APELLIDOS}}</ion-col>
@@ -28,22 +29,26 @@
             <ion-col class="col-text-st">Nacimiento:</ion-col>
             <ion-col class="col-text">{{datosVotacion.FECHA_DE_NACIMIENTO}}</ion-col>
         </ion-row>
+        <br>
         <ion-row>
-            <ion-col class="col-text-st">Direccion:</ion-col>
-            <ion-col class="col-text">{{datosVotacion.DIRECCION}}</ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="col-text-st">Municipio:</ion-col>
-            <ion-col class="col-text">{{datosVotacion.MUNICIPIO}}</ion-col>
+            <ion-col class="col-text-st">Lugar Votacion:</ion-col>
+            <ion-col class="col-text">{{datosVotacion.CENTRO}}</ion-col>
         </ion-row>
         <ion-row>
             <ion-col class="col-text-st">Departamento:</ion-col>
             <ion-col class="col-text">{{datosVotacion.DEPARTAMENTO}}</ion-col>
         </ion-row>
         <ion-row>
-            <ion-col class="col-text-st">Lugar Votacion:</ion-col>
-            <ion-col class="col-text">{{datosVotacion.CENTRO}}</ion-col>
+            <ion-col class="col-text-st">Municipio:</ion-col>
+            <ion-col class="col-text">{{datosVotacion.MUNICIPIO}}</ion-col>
         </ion-row>
+        <ion-row>
+            <ion-col class="col-text-st">Direccion:</ion-col>
+            <ion-col class="col-text">{{datosVotacion.DIRECCION}}</ion-col>
+        </ion-row>
+
+        <br>
+
         <ion-row>
             <ion-col class="col-text-st">Mesa:</ion-col>
             <ion-col class="col-text">{{datosVotacion.MESA_DE_NUMERO}}</ion-col>
@@ -62,18 +67,15 @@
         </ion-row>
     </ion-grid>
 
+
     <ion-row>
         <ion-col style="text-align:center">
             <button text-center ion-button (click)="irConsultar()">Realizar Nueva Consulta</button>
         </ion-col>
     </ion-row>
-
-</ion-content>
-
-<ion-footer>
-    <ion-row>
+    <ion-row class="footer-image">
         <ion-col>
             <img src="assets/imgs/banner-footer.png">
         </ion-col>
     </ion-row>
-</ion-footer>
+</ion-content>

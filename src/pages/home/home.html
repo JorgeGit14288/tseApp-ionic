@@ -8,8 +8,8 @@
         <ion-title text-center>Tribunal Supremo Electoral</ion-title>
         <ion-buttons end>
             <button ion-button icon-only (click)="salir()">
-          <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
-        </button>
+                <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
+            </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
@@ -21,7 +21,8 @@
     <h3 text-center>Consulte su lugar de votación</h3>
 
     <p>
-        El presente servicio brinda al ciudadano información para verificación de sus datos que se encuentran registrados en la Base de Datos del Padrón Electoral.
+        El presente servicio brinda al ciudadano información para verificación de sus datos que se encuentran registrados en la Base
+        de Datos del Padrón Electoral.
     </p>
     <br>
     <!--
@@ -42,26 +43,27 @@
         <ion-row>
             <ion-col>
                 <button ion-item (click)="verInfo()">
-        <img src="assets/imgs/buttons/btn_1.JPG">
-        <h2 text-wrap>¿Que es la Consulta Popular?</h2>
-      </button>
+                    <img src="assets/imgs/buttons/btn_1.JPG">
+                    <h2 text-wrap>¿Que es la Consulta Popular?</h2>
+                </button>
             </ion-col>
             <ion-col>
                 <button ion-item (click)="consultar()">
-             <img src="assets/imgs/buttons/btn_2.JPG">
-        <h2 text-wrap>Consultar Centro de Votacion</h2>
-      </button>
+                    <img src="assets/imgs/buttons/btn_2.JPG">
+                    <h2 text-wrap>Consultar Centro de Votacion</h2>
+                </button>
             </ion-col>
         </ion-row>
 
     </ion-grid>
-
-</ion-content>
-<ion-footer>
-    <ion-row>
+    <ion-row class="footer-image">
         <ion-col>
             <img src="assets/imgs/banner-footer.png">
         </ion-col>
     </ion-row>
+
+</ion-content>
+<ion-footer>
+
 
 </ion-footer>

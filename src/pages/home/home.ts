@@ -16,7 +16,7 @@ import { SlidesInfoPage } from '../slides-info/slides-info';
   selector: 'page-home',
   templateUrl: 'home.html',
 })
-export class HomePage {
+export class HomePage  {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform:Platform) {
