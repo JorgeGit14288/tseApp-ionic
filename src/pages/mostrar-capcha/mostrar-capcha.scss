@@ -4,14 +4,15 @@ page-mostrar-capcha {
     }
     /* Solve problem on a non-solid background */
 
-    .img { 
+    .img-captcha { 
     border: 2px solid black !important; 
-     width: 75%;
+     width: 50%;
 
     } 
-    
-   
-    
+    .input-captcha{
+        text-align: center !important;
+        font-size: 20px
+    }
 
 }
 img.hover { 

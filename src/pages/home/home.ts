@@ -38,6 +38,8 @@ export class HomePage extends PageConfigurations  {
     console.log("Ir a slides-menu");
     this.navCtrl.push(SlidesInfoPage);
   }
-
+  backButtonAction() {
+    this.salir();
+  }
 }
 

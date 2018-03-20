@@ -36,8 +36,17 @@
                             <ion-label color="primary">Ingrese su número de DPI:</ion-label>
                         </ion-row>
                         <ion-item>
-                            <ion-input name="cui" type="number" placeholder="XXXX XXXX XXXX" [(ngModel)]="solicitud.cui" #cui="ngModel" [required]="true"
-                                min="15" max="20" pattern="[0-9]+"></ion-input>
+                            <ion-input  text-center 
+                             name="cui" 
+                             type="number" 
+                             placeholder="ejemplo: 293919283029" 
+                             [(ngModel)]="solicitud.cui"
+                              #cui="ngModel" 
+                              [required]="true"
+                              maxlength="10"
+                              minlength="10"
+                              pattern="[0-9]+"
+                               ></ion-input>
                         </ion-item>
                         <!--
                         <span *ngIf="cui.errors">
@@ -51,8 +60,18 @@
                         <ion-row>
                             <ion-label color="primary">Ingrese su fecha de nacimiento:</ion-label>
                         </ion-row>
-                        <ion-item>
-                            <ion-datetime name="fechaNacimiento" displayFormat="DD/MM/YYYY" [(ngModel)]="solicitud.fechaNacimiento" required></ion-datetime>
+                        <ion-item text-center>
+                            <ion-datetime text-center
+                             name="fechaNacimiento" 
+                             displayFormat="DD/MMM/YYYY" 
+                             montNames='enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre' 
+                             monthShortNames='enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre' 
+                             cancelText ="Cancelar"
+                             doneText = "Aceptar"
+                             placeholder="dia/mes/año"
+                             [(ngModel)]="solicitud.fechaNacimiento" 
+                             required>
+                            </ion-datetime>
                         </ion-item>
                     </ion-row>
                 </ion-list>
@@ -65,8 +84,6 @@
                     </ion-col>
                 </ion-row>
                 
-        
-
     </div>
     <br><br>
     <div style="text-align:center;">

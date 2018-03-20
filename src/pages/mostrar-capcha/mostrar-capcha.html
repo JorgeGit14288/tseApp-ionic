@@ -11,22 +11,23 @@
 
 </ion-header>
 
-<ion-content padding scroll="false">
+<ion-content  scroll="false">
     <div class="div-form">
         <ion-row>
             <ion-col>
                 <div style="text-align:center;">
-                    <img class="img" [src]="base64Image">
+                    <img class="img-captcha" [src]="base64Image">
                 </div>
             </ion-col>
         </ion-row>
 
         <p>
             <ion-row>
-                <ion-label>Ingrese el código que muestra la imagen:</ion-label>
+                <ion-label text-center>Ingrese el código que muestra la imagen:</ion-label>
             </ion-row>
             <ion-item>
-                <ion-input autocapitalize="off" style="text-transform:lowercase;" type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
+                <ion-input text-center class="input-captcha"
+                 autocapitalize="off" style="text-transform:lowercase;" type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
             </ion-item>
 
             <p>

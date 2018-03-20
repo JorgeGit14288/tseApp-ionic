@@ -100,6 +100,9 @@ ion-img {
         background: #eee;
         contain: layout;
     }
+    .item-datetime ion-datetime {
+        text-align: right;
+    }
 body {
     font-family: inherit !important;
 }
