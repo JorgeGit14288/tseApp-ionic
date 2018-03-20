@@ -31,10 +31,10 @@ export class IngresarSolicitudPage extends PageConfigurations {
   public solicitud: any = {
     token: "9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
     codSys: "",
-    cui: "1640859040904",
-    fechaNacimiento: "1940-12-10",
-    //cui: "",
-    //fechaNacimiento: "",
+    //cui: "1640859040904",
+    //fechaNacimiento: "1940-12-10",
+    cui: "",
+    fechaNacimiento: "",
   }
 
   public respuestaCapcha: any = {
@@ -54,7 +54,7 @@ export class IngresarSolicitudPage extends PageConfigurations {
     }
 
   }
-  onSubmit(form): void {
+  onSubmit(): void {
 
     this.solicitud.codSys = "ef1b058bc386";
     //iniciamos el loader

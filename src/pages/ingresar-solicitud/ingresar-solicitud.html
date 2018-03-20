@@ -58,7 +58,7 @@
                 </ion-list>
                 <ion-row>
                     <ion-col text-right>
-                        <button ion-button color="primary" (click)="irHome()" type="submit" block [disabled]="solicitud.cui==''|| solicitud.fechaNacimiento==''"> Consultar </button>
+                        <button ion-button color="primary" (click)="onSubmit()"  block [disabled]="solicitud.cui==''|| solicitud.fechaNacimiento==''"> Consultar </button>
                     </ion-col>
                     <ion-col text-left>
                         <button text-center ion-button (click)="irHome()">Volver al inicio</button>
