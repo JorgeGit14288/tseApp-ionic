@@ -50,8 +50,15 @@ ion-label {
 }
 
 .alert-message {
-    color: #afb2b9!important;
+    color: #afb2b9!important;   
+    text-align: center; 
 }
+.alert-md .alert-button .button-inner {
+    color: #555c69!important;
+}
+
+
+
 
 .alert .alert-button {
     color: #5774a7;
@@ -77,6 +84,22 @@ ion-label {
     width: 100%;
     background: #5774a6;
 }
+.button-image-personalizado {
+    border-radius: 20px;
+    border: 2px solid #5774a6;
+}
+.button-image-personalizado:hover {
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+ion-img {
+        display: inline-block;
+        min-width: 20px;
+        min-height: 20px;
+        background: #eee;
+        contain: layout;
+    }
 body {
     font-family: inherit !important;
 }

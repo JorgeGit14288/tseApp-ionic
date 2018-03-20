@@ -41,13 +41,13 @@
     <ion-grid>
 
         <ion-row>
-            <ion-col>
+            <ion-col class="button-image-personalizado" >
                 <button ion-item (click)="verInfo()">
                     <img src="assets/imgs/buttons/btn_1.JPG">
                     <h2 text-wrap>¿Que es la Consulta Popular?</h2>
                 </button>
             </ion-col>
-            <ion-col>
+            <ion-col class="button-image-personalizado" >
                 <button ion-item (click)="consultar()">
                     <img src="assets/imgs/buttons/btn_2.JPG">
                     <h2 text-wrap>Consultar Centro de Votacion</h2>
@@ -56,14 +56,12 @@
         </ion-row>
 
     </ion-grid>
-    <ion-row class="footer-image">
-        <ion-col>
-            <img src="assets/imgs/banner-footer.png">
-        </ion-col>
-    </ion-row>
-
+<br><br>
+    <div style="text-align:center;">
+        <ion-img src="assets/imgs/banner-footer.png"></ion-img>
+    </div>
+    
 </ion-content>
 <ion-footer>
-
 
 </ion-footer>
