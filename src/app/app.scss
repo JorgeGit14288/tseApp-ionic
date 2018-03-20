@@ -57,7 +57,19 @@ ion-label {
     color: #555c69!important;
 }
 
-
+.keyboard-displayed {
+    .scroll-content {
+      margin-bottom: 0px !important;
+      padding-bottom: 225px !important;
+    }
+  }
+  
+  .keyboard-dismissed {
+    .scroll-content {
+      margin-bottom: 0px !important;
+      padding-bottom: 0px !important;
+    }
+  }
 
 
 .alert .alert-button {
