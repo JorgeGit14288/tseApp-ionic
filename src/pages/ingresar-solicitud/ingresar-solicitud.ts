@@ -21,102 +21,90 @@ import { PageConfigurations } from '../page_configurations';
 export class IngresarSolicitudPage extends PageConfigurations {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public tseProv: TseProvider
-    ,public alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform: Platform, public menuController :MenuController) {
-     
-      super(navCtrl,menuController , loadingCtrl, alertCtrl, platform);
-    }
+    , public alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform: Platform, public menuController: MenuController) {
+
+    super(navCtrl, menuController, loadingCtrl, alertCtrl, platform);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad IngresarSolicitudPage');
   }
-  public solicitud : any ={
-    token:"9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
-    codSys : "",
+  public solicitud: any = {
+    token: "9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
+    codSys: "",
     cui: "1640859040904",
     fechaNacimiento: "1940-12-10",
-   //cui: "",
+    //cui: "",
     //fechaNacimiento: "",
-   }
+  }
 
-   public respuestaCapcha: any={
+  public respuestaCapcha: any = {
     STATUS: "",
     USRMENSAJE: "",
-    NTRANS:"",
-    IMA:""
+    NTRANS: "",
+    IMA: ""
   }
-  public loader =null;
+  public loader = null;
 
   logForm(form) {
-    if(form.valid){
+    if (form.valid) {
       console.log(form.value)
     }
-    else{
+    else {
       console.log("No valido");
     }
 
   }
-  onSubmit(form): void{
-    if(form.valid){
-      this.solicitud.codSys ="ef1b058bc386";
-      //iniciamos el loader
-        this.loader = this.loadingCtrl.create({
-          content: "Cargando",
-        });
-        this.loader.present();
-      this.tseProv.getCapcha(this.solicitud).then(res=>{
-        this.respuestaCapcha = res;
-        //cerramos el loader
-        this.loader.dismiss();
-        //enviamos los datos a otra pagina
-         if (this.respuestaCapcha.STATUS =="0"){
-           let alert = this.alertCtrl.create({
-            // title: 'Error',
-             //subTitle: '10% of battery r',
-             message: this.respuestaCapcha.USRMENSAJE,
-             buttons: [
-              {
-                text: 'Aceptar',
-                handler: () => {
+  onSubmit(form): void {
 
-                  this.navCtrl.push(IngresarSolicitudPage)
-
-                }
-              }
-            ]
-           });
-           alert.present();
-         }
-         else {
-          this.navCtrl.push(MostrarCapchaPage, {
-            'capcha': this.respuestaCapcha
-          })
-        }
-      }).catch(err=>{
-        this.loader.dismiss();
+    this.solicitud.codSys = "ef1b058bc386";
+    //iniciamos el loader
+    this.loader = this.loadingCtrl.create({
+      content: "Cargando",
+    });
+    this.loader.present();
+    this.tseProv.getCapcha(this.solicitud).then(res => {
+      this.respuestaCapcha = res;
+      //cerramos el loader
+      this.loader.dismiss();
+      //enviamos los datos a otra pagina
+      if (this.respuestaCapcha.STATUS == "0") {
         let alert = this.alertCtrl.create({
-         // title: 'Error',
+          // title: 'Error',
           //subTitle: '10% of battery r',
-          message: err.message,
-          buttons: ['Aceptar']
+          message: this.respuestaCapcha.USRMENSAJE,
+          buttons: [
+            {
+              text: 'Aceptar',
+              handler: () => {
+
+                this.navCtrl.push(IngresarSolicitudPage)
+
+              }
+            }
+          ]
         });
         alert.present();
-      })
-    }
-    else{
-      console.log("Formulario no valido");
+      }
+      else {
+        this.navCtrl.push(MostrarCapchaPage, {
+          'capcha': this.respuestaCapcha
+        })
+      }
+    }).catch(err => {
+      this.loader.dismiss();
       let alert = this.alertCtrl.create({
-        //title: 'Error',
+        // title: 'Error',
         //subTitle: '10% of battery r',
-        message: "Debe de ingresar la información solicitada",
+        message: err.message,
         buttons: ['Aceptar']
       });
       alert.present();
-
-    }
+    })
   }
-  irHome(){
+
+
+
+  backButtonAction() {
     this.navCtrl.setRoot(HomePage);
   }
-  backButtonAction(){
-   this.navCtrl.setRoot(HomePage);
-    }
 }

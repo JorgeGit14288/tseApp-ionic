@@ -66,8 +66,6 @@ export class ResultadoConsultaPage extends PageConfigurations {
   backButtonAction(){
     this.navCtrl.setRoot(IngresarSolicitudPage);
      }
-     irHome(){
-      this.navCtrl.setRoot(HomePage);
-    }
+    
 }
 

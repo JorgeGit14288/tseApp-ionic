@@ -75,4 +75,7 @@ export class PageConfigurations implements OnInit {
         });
         alert.present();
     }
+    irHome(){
+        this.navCtrl.setRoot(HomePage);
+      }
 }
