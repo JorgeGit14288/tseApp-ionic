@@ -11,7 +11,7 @@
 
 </ion-header>
 
-<ion-content  [ngClass]="{'keyboard-displayed': false}">
+<ion-content [ngClass]="{'keyboard-displayed': false}">
     <div class="div-form">
         <ion-row>
             <ion-col>
@@ -26,8 +26,7 @@
                 <ion-label text-center>Ingrese el código que muestra la imagen:</ion-label>
             </ion-row>
             <ion-item>
-                <ion-input text-center class="input-captcha"
-                 autocapitalize="off" style="text-transform:lowercase;" type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
+                <ion-input text-center class="input-captcha" autocapitalize="off" style="text-transform:lowercase;" type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
             </ion-item>
 
             <p>
@@ -44,7 +43,7 @@
     </div>
     <br>
     <br>
-    <div style="text-align:center;">
+    <div style="text-align:center">
         <ion-img src="assets/imgs/banner-footer.png"></ion-img>
     </div>
 </ion-content>

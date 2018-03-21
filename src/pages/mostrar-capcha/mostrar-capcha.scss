@@ -3,25 +3,16 @@ page-mostrar-capcha {
         padding-top: 5%;
     }
     /* Solve problem on a non-solid background */
-
-    .img-captcha { 
-    border: 2px solid black !important; 
-     width: 50%;
-
-    } 
-    .input-captcha{
+    .img-captcha {
+        border: 2px solid black !important;
+        width: 50%;
+    }
+    .input-captcha {
         text-align: center !important;
         font-size: 20px
     }
-
 }
-img.hover { 
-    outline: 3px solid black !important;
-    /*#5774a7
-      texto color:  color: #808794;  titulo #555c69
-    toolbar-md-primary .toolbar-background-md {
-    background: #5774a7;
 
-    */
-   
-} 
+img.hover {
+    outline: 3px solid black !important;
+}

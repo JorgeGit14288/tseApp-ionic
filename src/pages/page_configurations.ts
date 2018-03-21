@@ -44,11 +44,10 @@ export class PageConfigurations implements OnInit {
                 }
                 else if (view.component.name == "HomePage") {
                     this.salir()
-                }
-                else if (this.navCtrl.canGoBack()) {
+                }else if (typeof activeView.instance.backButtonAction === 'function') {
+                  activeView.instance.backButtonAction();
+              } else if (this.navCtrl.canGoBack()) {
                     this.navCtrl.pop();
-                } else if (typeof activeView.instance.backButtonAction === 'function') {
-                    activeView.instance.backButtonAction();
                 } else {
                     this.navCtrl.setRoot(HomePage);
                 }
