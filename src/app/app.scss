@@ -51,9 +51,15 @@ ion-label {
     background-color: #5774a7;
 }
 
+.button-inner {
+    // background-color: #0076CC;
+    //color: #555c69!important;
+}
+
 .alert-message {
     color: #afb2b9!important;
     text-align: center;
+    font-size: 17px !important;
 }
 
 .alert-md .alert-button .button-inner {
@@ -106,6 +112,15 @@ ion-img {
 
 .item-datetime ion-datetime {
     text-align: right;
+}
+
+.item h2 {
+    margin: 2px 0;
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center;
+    color: #5774a7;
+    font-weight: bold;
 }
 
 body {
