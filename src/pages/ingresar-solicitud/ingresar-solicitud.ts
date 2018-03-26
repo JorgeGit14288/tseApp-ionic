@@ -32,8 +32,8 @@ export class IngresarSolicitudPage extends PageConfigurations {
   public solicitud: any = {
     token: "9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
     codSys: "",
-    cui: "1640859040904",
-    fechaNacimiento: "1940-12-10",
+    cui: "1750927530901",
+    fechaNacimiento: "1988-02-14",
     //cui: "",
     //fechaNacimiento: "",
   }
@@ -102,9 +102,6 @@ export class IngresarSolicitudPage extends PageConfigurations {
       alert.present();
     })
   }
-
-
-
   backButtonAction() {
     this.navCtrl.setRoot(HomePage);
   }
