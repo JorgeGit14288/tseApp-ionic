@@ -15,7 +15,7 @@ import { SlidesInfoPageModule } from '../pages/slides-info/slides-info.module';
 import { HomePageModule } from '../pages/home/home.module';
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
-
+import { Screenshot } from '@ionic-native/screenshot';
 @NgModule({
   declarations: [
     MyApp,
@@ -30,7 +30,8 @@ import { CustomFormsModule } from 'ng2-validation';
     SlidesInfoPageModule,
     HomePageModule,
     FormsModule,
-    CustomFormsModule
+    CustomFormsModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,6 +40,7 @@ import { CustomFormsModule } from 'ng2-validation';
   providers: [
     StatusBar,
     SplashScreen,
+    Screenshot,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpProvider,
     TseProvider
