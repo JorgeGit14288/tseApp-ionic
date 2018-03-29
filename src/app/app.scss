@@ -122,7 +122,18 @@ ion-img {
     color: #5774a7;
     font-weight: bold;
 }
-
+ .picker-button{
+    color: #40567c !important;
+}
+ .picker-opt.picker-opt-selected {
+   color: #40567c !important;
+}
+.picker-opt{
+        color: #808794 !important;
+}
+ion-datetime{
+    padding-left: 30% !important;
+}
 body {
     font-family: inherit !important;
 }

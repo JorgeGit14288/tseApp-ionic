@@ -27,11 +27,12 @@ export class HttpProvider {
   post( endpoint: string, parametros: any, timeout: number = 180000) {
     //console.log("Estoy en post del http provider");
     //console.log("endpoint", endpoint);
+    console.log("Enviado", parametros);
     return new Promise((resolve, reject) => {
       this.http.post(endpoint, parametros, this.httpOptions)
         .timeout(timeout)
         .subscribe(res => {
-         // console.log("Respuesta",res);
+          console.log("Respuesta",res);
           resolve(res);
         },(err) => {
         err.message ="Lo sentimos, ocurrio un error de conexión con el servidor";

@@ -19,23 +19,24 @@ import { PageConfigurations } from '../page_configurations';
   templateUrl: 'ingresar-solicitud.html',
 })
 export class IngresarSolicitudPage extends PageConfigurations {
-
+  miModelo: any;
   constructor(public navCtrl: NavController, public navParams: NavParams, public tseProv: TseProvider
     , public alertCtrl: AlertController, public loadingCtrl: LoadingController, public platform: Platform, public menuController: MenuController) {
 
     super(navCtrl, menuController, loadingCtrl, alertCtrl, platform);
+    this.miModelo = {};
   }
-  
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad IngresarSolicitudPage');
   }
   public solicitud: any = {
     token: "9NM+D34KVLzIwjc2eOCcJ5R/Ooteu3/PjqjFDlfyIfayEH52PHGm8U7JHxk69vVI",
     codSys: "",
-    cui: "1750927530901",
-    fechaNacimiento: "1988-02-14",
-    //cui: "",
-    //fechaNacimiento: "",
+  //  cui: "1750927530901",
+   // fechaNacimiento: "1988-02-14",
+    cui: "",
+    fechaNacimiento: "",
   }
 
   public respuestaCapcha: any = {
