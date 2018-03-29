@@ -129,10 +129,17 @@ ion-img {
    color: #40567c !important;
 }
 .picker-opt{
-        color: #808794 !important;
+        color: #376dce!important;
 }
 ion-datetime{
     padding-left: 30% !important;
+}
+.form-error{
+    p {
+    color: #376dce !important;
+    text-align: justify;
+    font-size: 13px !important;
+}
 }
 body {
     font-family: inherit !important;

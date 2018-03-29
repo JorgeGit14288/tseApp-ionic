@@ -35,7 +35,7 @@ export class HttpProvider {
           console.log("Respuesta",res);
           resolve(res);
         },(err) => {
-        err.message ="Lo sentimos, ocurrio un error de conexión con el servidor";
+        err.message ="Lo sentimos, ocurrio un error de conexión con el servidor, por favor revise su conexión a internet";
           reject(err);
         });
     });

@@ -60,14 +60,11 @@ export class IngresarSolicitudPage extends PageConfigurations {
 
     this.solicitud.codSys = "ef1b058bc386";
     //iniciamos el loader
-    this.loader = this.loadingCtrl.create({
-      content: "Cargando",
-    });
-    this.loader.present();
+   this.loaderSimple();
     this.tseProv.getCapcha(this.solicitud).then(res => {
       this.respuestaCapcha = res;
       //cerramos el loader
-      this.loader.dismiss();
+      this.dismissLoader();
       //enviamos los datos a otra pagina
       if (this.respuestaCapcha.STATUS == "0") {
         let alert = this.alertCtrl.create({

@@ -71,14 +71,12 @@ export class MostrarCapchaPage extends PageConfigurations {
     this.validarCapcha.nTransac = this.capcha.transaccion;
     this.validarCapcha.Id="ef1b058bc386";
     this.validarCapcha.Guid = this.codigoCap;
-    this.loader = this.loadingCtrl.create({
-      content: "Cargando",
-    });
-    this.loader.present();
+
+    this.loaderSimple();
+   
     this.tseProv.validarCapcha(this.validarCapcha).then(res=>{
       this.respuestaCapcha=res;
-
-      this.loader.dismiss();
+      this.dismissLoader();
       if (this.respuestaCapcha.STATUS =="0"){
         let alert = this.alertCtrl.create({
          // title: 'Error',

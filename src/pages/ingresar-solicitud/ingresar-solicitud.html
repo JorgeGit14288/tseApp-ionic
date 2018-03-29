@@ -29,14 +29,11 @@
     <div class="div-form">
         <h3 text-center>Consultar Lugar de votación</h3>
         <ion-list>
+             <ion-row>
+                 <ion-label text-center color="primary">Ingrese su número de DPI:</ion-label>
+             </ion-row>
             <ion-row>
-                <ion-row>
-
-                    <ion-label text-center color="primary">Ingrese su número de DPI:</ion-label>
-
-                </ion-row>
                 <ion-item>
-
                     <ion-input text-center name="cui" type="number" [(ngModel)]="solicitud.cui" #cui="ngModel" required maxlength="13" minlength="13" pattern="[0-9]+"  digits number></ion-input>
                 </ion-item>
                 <!--
@@ -44,25 +41,25 @@
                 https://github.com/yuyang041060120/ng2-validation
                 -->
                 <div class="form-error" *ngIf="cui.errors  && (cui.dirty || cui.touched)">
-                    <p color="danger" [hidden]="!cui.errors.required">Campo requerido.</p>
-                    <p color="danger" [hidden]="!cui.errors.number">Requiere solo numeros</p>
-                    <p color="danger" [hidden]="!cui.errors.minlength">Su número de DPI debe de tener 13 digitos</p>
-                    <p color="danger" [hidden]="!cui.errors.maxlength">El número ingresado excede la cantidad de digitos</p>
-                    <p color="danger" [hidden]="!cui.errors.pattern">Solo se aceptan digitos del 0 al 9</p>
-                    <p color="danger" [hidden]="!cui.errors.digits">Solo se aceptan digitos del 0 al 9</p>
+                    <p text-center [hidden]="!cui.errors.required">Campo requerido, solo números.</p>
+                    <p text-center [hidden]="!cui.errors.number">Requiere solo numeros</p>
+                    <p text-center [hidden]="!cui.errors.minlength">Su número de DPI debe de tener 13 digitos</p>
+                    <p text-center [hidden]="!cui.errors.maxlength">El número ingresado excede la cantidad de digitos</p>
+                    <p text-center [hidden]="!cui.errors.pattern">Solo se aceptan digitos del 0 al 9</p>
+                    <p text-center [hidden]="!cui.errors.digits">Solo se aceptan digitos del 0 al 9</p>
                 </div>
             </ion-row>
+            <ion-row text-center>
+                 <ion-label text-center>Ingrese su fecha de nacimiento:</ion-label>
+            </ion-row>
             <ion-row>
-                <ion-row>
-                    <ion-label text-center>Ingrese el código que muestra la imagen:</ion-label>
-                </ion-row>
                 <ion-item text-center>
                     <ion-datetime text-center name="fechaNacimiento" min="1916" displayFormat="DD/MMM/YYYY" montNames='enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre' monthShortNames='enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre'
                       #fechaNacimiento="ngModel"  cancelText="Cancelar" doneText="Aceptar" placeholder="dia/mes/año" [(ngModel)]="solicitud.fechaNacimiento" required>
                     </ion-datetime>
                 </ion-item>
                 <div class="form-error" *ngIf="fechaNacimiento.errors  && (fechaNacimiento.dirty || fechaNacimiento.touched)">
-                    <p color="danger" [hidden]="!cui.errors.required">Campo requerido.</p>
+                    <p text-center [hidden]="!fechaNacimiento.errors.required">Campo requerido.</p>
                 </div>
             </ion-row>
         </ion-list>
@@ -78,8 +75,7 @@
 
     </div>
     <br><br>
-    <br><br>
-    <br><br>
+    <br>
     <div style="text-align:center;">
         <ion-img src="assets/imgs/banner-footer.png"></ion-img>
     </div>

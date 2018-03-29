@@ -20,27 +20,25 @@
                 </div>
             </ion-col>
         </ion-row>
-
-        <p>
+        <br>
+        <ion-row>
+           <ion-label text-center>Ingrese el código que muestra la imagen:</ion-label>
+         </ion-row>
+         <ion-item>
+            <ion-input text-center class="input-captcha" autocapitalize="off" style="text-transform:lowercase;" type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
+        </ion-item>
             <ion-row>
-                <ion-label text-center>Ingrese el código que muestra la imagen:</ion-label>
+                <ion-col text-right>
+                    <button ion-button block (click)="onSubmit()" [disabled]="codigoCap==''">Validar</button>
+                </ion-col>
+                <ion-col text-left>
+                     <button text-center block ion-button (click)="irHome()">Volver al inicio</button>
+                 </ion-col>
             </ion-row>
-            <ion-item>
-                <ion-input text-center class="input-captcha" autocapitalize="off" style="text-transform:lowercase;" type="text" [(ngModel)]="codigoCap" #cui="ngModel" [required]="true"></ion-input>
-            </ion-item>
-
-            <p>
-                <ion-row>
-                    <ion-col text-right>
-                        <button ion-button full (click)="onSubmit()" [disabled]="codigoCap==''">Validar</button>
-                    </ion-col>
-                    <ion-col text-left>
-                        <button text-center full ion-button (click)="irHome()">Volver al inicio</button>
-                    </ion-col>
-                </ion-row>
-
-
     </div>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <div style="text-align:center">
