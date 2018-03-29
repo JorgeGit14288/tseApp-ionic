@@ -39,7 +39,7 @@ export class PageConfigurations implements OnInit {
            let activeView: ViewController = this.navCtrl.getActive();
           
                // let isLoading = this.ionicApp._loadingPortal.getActive();
-                 if(this.loaders.length > 1){
+                 if(this.loaders.length > 0){
                     console.log("Se esta cargando el programa", this.loaders.length);
                   }
                 else if (this.menuCtrl.isOpen()) {
