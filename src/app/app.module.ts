@@ -13,7 +13,9 @@ import { ResultadoConsultaPageModule } from '../pages/resultado-consulta/resulta
 import { MostrarCapchaPageModule } from '../pages/mostrar-capcha/mostrar-capcha.module';
 import { SlidesInfoPageModule } from '../pages/slides-info/slides-info.module';
 import { HomePageModule } from '../pages/home/home.module';
-
+import { FormsModule } from '@angular/forms';
+import { CustomFormsModule } from 'ng2-validation';
+import { Screenshot } from '@ionic-native/screenshot';
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +28,10 @@ import { HomePageModule } from '../pages/home/home.module';
     ResultadoConsultaPageModule,
     MostrarCapchaPageModule,
     SlidesInfoPageModule,
-    HomePageModule
+    HomePageModule,
+    FormsModule,
+    CustomFormsModule,
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -35,6 +40,7 @@ import { HomePageModule } from '../pages/home/home.module';
   providers: [
     StatusBar,
     SplashScreen,
+    Screenshot,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     HttpProvider,
     TseProvider

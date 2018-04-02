@@ -11,7 +11,7 @@
 </ion-header>
 
 
-<ion-content padding scroll="false">
+<ion-content padding scroll="false" [class.newBG]="state">
     <ion-title text-center>Información de votación</ion-title>
     <ion-grid>
 
@@ -64,13 +64,19 @@
             <ion-col class="col-text">{{datosVotacion.BOLETA}}</ion-col>
         </ion-row>
     </ion-grid>
+    <ion-row>
+        <ion-col>
+            <button text-center ion-button block (click)="screenShot()">Guardar Captura</button>
+        </ion-col>
+        <img src="{{ screen }}" *ngIf="state">
+    </ion-row>
 
     <ion-row>
         <ion-col text-right>
-            <button text-center full ion-button (click)="irConsultar()">Nueva Consulta</button>
+            <button text-center block ion-button (click)="irConsultar()">Nueva Consulta</button>
         </ion-col>
         <ion-col text-left>
-            <button text-center full ion-button (click)="irHome()">Volver al inicio</button>
+            <button text-center block ion-button (click)="irHome()">Volver al inicio</button>
         </ion-col>
     </ion-row>
     <br>

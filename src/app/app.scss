@@ -121,6 +121,7 @@ ion-img {
     color: #5774a7;
     font-weight: bold;
 }
+<<<<<<< HEAD
 
 .item-datetime ion-datetime {
     text-align: center !important;
@@ -151,6 +152,26 @@ ion-img {
 .picker-ios .picker-opt {
     color: #3f547e !important;
     
+=======
+ .picker-button{
+    color: #40567c !important;
+}
+ .picker-opt.picker-opt-selected {
+   color: #40567c !important;
+}
+.picker-opt{
+        color: #376dce!important;
+}
+ion-datetime{
+    padding-left: 30% !important;
+}
+.form-error{
+    p {
+    color: #376dce !important;
+    text-align: justify;
+    font-size: 13px !important;
+}
+>>>>>>> e6eb7fe8f171ef95c1bde02ae9932f59f63dc53a
 }
 body {
     font-family: inherit !important;
