@@ -1,5 +1,5 @@
 {
-  "name": "Consulta Popular 2018",
+  "name": "tse",
   "version": "0.0.1",
   "author": "Jorge Fuentes",
   "homepage": "http://ionicframework.com/",
@@ -30,7 +30,7 @@
     "cordova-android": "7.0.0",
     "cordova-plugin-device": "^2.0.1",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
-    "cordova-plugin-ionic-webview": "^1.1.16",
+    "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-whitelist": "^1.3.3",
     "ionic-angular": "3.9.2",

@@ -91,22 +91,30 @@ export class PageConfigurations implements OnInit {
     
         this.loaders.pop();
       }
+      alert =null;
     salir() {
         console.log("Salir");
-        let alert = this.alertCtrl.create({
-            // title: 'Error',
-            //subTitle: '10% of battery r',
-            message: "Gracias por utilizar nuestro servicio",
-            buttons: [
-                {
-                    text: 'Aceptar',
-                    handler: () => {
-                        this.platform.exitApp()
+        if(this.alert!=null){
+            this.alert.dismiss();
+            this.platform.exitApp()
+        }
+        else
+        {
+            this.alert = this.alertCtrl.create({
+                // title: 'Error',
+                //subTitle: '10% of battery r',
+                message: "Gracias por utilizar nuestro servicio",
+                buttons: [
+                    {
+                        text: 'Aceptar',
+                        handler: () => {
+                            this.platform.exitApp()
+                        }
                     }
-                }
-            ]
-        });
-        alert.present();
+                ]
+            });
+            this.alert.present();
+        }
     }
     irHome(){
         this.navCtrl.setRoot(HomePage);
