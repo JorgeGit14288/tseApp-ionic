@@ -1,8 +1,8 @@
 {
   "name": "tse",
-  "version": "0.0.1",
-  "author": "Jorge Fuentes",
-  "homepage": "http://ionicframework.com/",
+  "version": "0.0.2",
+  "author": "Tribunal Supremo Electoral Guatemala",
+  "homepage": "http://www.tse.org.gt/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
